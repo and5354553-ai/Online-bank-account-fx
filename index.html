@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Trading</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #222;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .balance {
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: 0;
+      border-radius: 8px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .buy {
+      background: #16a34a;
+      color: white;
+    }
+
+    .sell {
+      background: #dc2626;
+      color: white;
+    }
+
+    .notice {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Practice Trading</h1>
+    <p>Simulation only — no real money</p>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Practice Account</h2>
+      <p>Virtual Balance</p>
+      <div class="balance" id="balance">$10,000.00</div>
+    </div>
+
+    <div class="card">
+      <h2>Demo Trade</h2>
+      <p>Asset: EUR/USD</p>
+      <p>Simulated Price: <strong id="price">1.1000</strong></p>
+
+      <button class="buy" onclick="buy()">BUY</button>
+      <button class="sell" onclick="sell()">SELL</button>
+
+      <p id="message"></p>
+    </div>
+
+    <div class="card">
+      <h2>About</h2>
+      <p class="notice">
+        This application is for practice and education only.
+        All balances and trades are virtual. No real deposits,
+        withdrawals, or real-money trading are supported.
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    let balance = 10000;
+
+    function updateBalance() {
+      document.getElementById("balance").textContent =
+        "$" + balance.toFixed(2);
+    }
+
+    function buy() {
+      document.getElementById("message").textContent =
+        "Practice BUY order recorded.";
+    }
+
+    function sell() {
+      document.getElementById("message").textContent =
+        "Practice SELL order recorded.";
+    }
+
+    updateBalance();
+  </script>
+
+</body>
+                            </html>
